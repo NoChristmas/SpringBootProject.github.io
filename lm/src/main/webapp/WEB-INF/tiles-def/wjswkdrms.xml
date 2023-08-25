@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- 아래 설정을 상황에 맞게 변형해서 사용하세요 -->
+    <definition name="service" template="/WEB-INF/views/bookstore/template/bsServiceLayout.jsp">
+    	<put-attribute name="title" value="고객센터"/>
+    	<put-attribute name="header" value="/WEB-INF/views/bookstore/template/bsHeader.jsp"/>
+    	<put-attribute name="nav" value="/WEB-INF/views/bookstore/template/service_nav.jsp"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/main.jsp"/>
+	    <put-attribute name="footer" value="/WEB-INF/views/bookstore/template/bsFooter.jsp"/> 
+    </definition>
+	<definition name="announceList" extends="service">
+    	<put-attribute name="title" value="공지사항 목록"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/announceList.jsp"/>
+    </definition>
+    <definition name="announceWrite" extends="service">
+    	<put-attribute name="title" value="공지사항 작성"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/announceWrite.jsp"/>
+    </definition>
+    <definition name="announceView" extends="service">
+    	<put-attribute name="title" value="공지사항 상세"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/announceView.jsp"/>
+    </definition>
+    <definition name="faqWrite" extends="service">
+    	<put-attribute name="title" value="자주묻는질문 작성"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/faqWrite.jsp"/>
+    </definition>
+    <definition name="faqModify" extends="service">
+    	<put-attribute name="title" value="자주묻는질문 수정"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/faqModify.jsp"/>
+    </definition>
+    <definition name="faqList" extends="service">
+    	<put-attribute name="title" value="자주묻는질문 목록"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/faqList.jsp"/>
+    </definition>
+    <definition name="mainDesk" extends="service">
+    	<put-attribute name="title" value="1:1문의사항"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/deskMain.jsp"/>
+    </definition>
+    <definition name="askWrite" extends="service">
+    	<put-attribute name="title" value="1:1문의작성"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/askWrite.jsp"/>
+    </definition>
+    <definition name="answerWrite" extends="service">
+    	<put-attribute name="title" value="1:1문의답변"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/answerWrite.jsp"/>
+    </definition>
+    <definition name="answerDetail" extends="service">
+    	<put-attribute name="title" value="1:1문의답변"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/service/answerDetail.jsp"/>
+    </definition>
+    
+    <definition name="bsadmin" template="/WEB-INF/views/bookstore/template/bsAdminLayout.jsp">
+    	<put-attribute name="title" value="관리자 메인"/>
+    	<put-attribute name="header" value="/WEB-INF/views/bookstore/template/bsHeader.jsp"/>
+    	<put-attribute name="nav" value="/WEB-INF/views/bookstore/template/admin_nav.jsp"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/admin/main.jsp"/>
+	    <put-attribute name="footer" value="/WEB-INF/views/bookstore/template/bsFooter.jsp"/> 
+    </definition>
+    <definition name="adminMemberList" extends="bsadmin">
+    	<put-attribute name="title" value="회원관리"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/member/admin_memberList.jsp"/>
+    </definition>
+     <definition name="adminMemberModify" extends="bsadmin">
+    	<put-attribute name="title" value="회원권한 수정"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/member/admin_memberModify.jsp"/>
+    </definition>
+    <definition name="bsAdminProductList" extends="bsadmin">
+    	<put-attribute name="title" value="상품목록"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/product/adminProductList.jsp"/>
+    </definition>
+    <definition name="adminProductModify" extends="bsadmin">
+    	<put-attribute name="title" value="상품수정"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/product/adminProductModify.jsp"/>
+    </definition>
+    <definition name="adminOrderList" extends="bsadmin">
+    	<put-attribute name="title" value="주문목록"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/admin/orderList.jsp"/>
+    </definition>
+    <definition name="adminOrderDetail" extends="bsadmin">
+    	<put-attribute name="title" value="주문상세"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/admin/adminOrderDetail.jsp"/>
+    </definition>
+    <definition name="adminOrderTotal" extends="bsadmin">
+    	<put-attribute name="title" value="매출내역"/>
+	    <put-attribute name="body" value="/WEB-INF/views/bookstore/admin/adminOrderTotal.jsp"/>
+    </definition>
+    <definition name="libApplyMain" template="/WEB-INF/views/library/template/libApplyLayout.jsp">
+    	<put-attribute name="title" value="시설 목록"/>
+    	<put-attribute name="header" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+    	<put-attribute name="nav" value="/WEB-INF/views/library/template/libPageNav2.jsp"/>
+    	<put-attribute name="body" value="/WEB-INF/views/library/apply/bookApplyMain.do"/>
+    	<put-attribute name="footer" value="/WEB-INF/views/library/template/libFooter.jsp"/>                                        
+    </definition>
+    <definition name="insertFacility" extends="libApplyMain">
+    	<put-attribute name="title" value="시설추가"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/insertFacility.jsp"/>
+    </definition>
+    <definition name="facilityList" extends="libApplyMain">
+    	<put-attribute name="title" value="시설목록"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/facilityList.jsp"/>
+    </definition>
+    <definition name="facApplyWrite" extends="libApplyMain">
+    	<put-attribute name="title" value="시설목록"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/facilityApplyForm.jsp"/>
+    </definition>
+    <definition name="bookDonationMain" extends="libApplyMain">
+    	<put-attribute name="title" value="기증 안내"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/bookDonationMain.jsp"/>
+    </definition>
+    <definition name="bookDonationApply" extends="libApplyMain">
+    	<put-attribute name="title" value="기증 신청"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/bookDonationApply.jsp"/>
+    </definition>
+    <definition name="insertProgram" extends="libApplyMain">
+    	<put-attribute name="title" value="프로그램 추가"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/insertProgram.jsp"/>
+    </definition>
+    <definition name="programList" extends="libApplyMain">
+    	<put-attribute name="title" value="프로그램 목록"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/programList.jsp"/>
+    </definition>
+    <definition name="programDetail" extends="libApplyMain">
+    	<put-attribute name="title" value="프로그램 상세"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/programDetail.jsp"/>
+    </definition>
+    <definition name="bookApplyWrite" extends="libApplyMain">
+    	<put-attribute name="title" value="희망도서 신청"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/bookApplyWrite.jsp"/>
+    </definition>
+    <definition name="bookApplyMain" extends="libApplyMain">
+    	<put-attribute name="title" value="희망도서 신청"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/bookApplyMain.jsp"/>
+    </definition>
+    <definition name="bookApplyUserList" extends="libApplyMain">
+    	<put-attribute name="title" value="희망도서 신청"/>
+	    <put-attribute name="body" value="/WEB-INF/views/library/apply/bookApplyUserList.jsp"/>
+    </definition>
+</tiles-definitions>
+
+
+
+
+

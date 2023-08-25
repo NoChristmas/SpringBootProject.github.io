@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.spring.library.program.dao.ProgramMapper">
+
+<insert id="insertProgram" parameterType="programVO">
+	INSERT INTO lib_program_admin (
+	  program_num,
+	  program_title,
+	  program_reg_date,
+	  program_admit,
+	  program_hit,
+	  program_content) 
+	VALUES (
+	  #{program_num},
+	  #{program_title},
+	  SYSDATE,
+	  #{program_admit},
+	  #{program_hit},
+	  #{program_content})
+</insert>
+
+<insert id="insertProgramTimes" parameterType="programTimesVO">
+	INSERT INTO lib_program_times(
+	  program_num,
+	  program_times_num,
+	  program_start,
+	  program_end,
+	  program_admit)
+	VALUES(
+	  #{program_num},
+	  lib_program_times_seq.nextval,
+	  #{program_start},
+	  #{program_end},
+	  #{program_admit})
+</insert>
+
+<select id="selectProgramStart" parameterType="integer" resultType="java.sql.Date">
+	SELECT 
+	  MIN(program_start) AS program_start
+	FROM lib_program_times
+	WHERE program_num = #{program_num}
+</select>
+<select id="selectProgramEnd" parameterType="integer" resultType="java.sql.Date">
+	SELECT
+	  MAX(program_end) AS program_end
+	FROM lib_program_times
+	WHERE program_num = #{program_num}
+</select>
+
+<select id="selectProgramList" parameterType="map" resultType="programVO">
+	SELECT
+		   *
+		FROM (SELECT
+		        a.*,
+		        rownum rnum
+		      FROM(SELECT
+		             *
+		           FROM lib_program_admin
+		           ORDER BY program_reg_date desc 
+		           )a)
+		<![CDATA[
+		WHERE rnum >= #{start} AND rnum <= #{end}
+		]]>
+</select>
+<select id="selectRowCount" parameterType="map"
+	                             resultType="integer">
+	SELECT
+	  COUNT(*)
+	FROM lib_program_admin
+</select>
+
+<insert id="insertProgramApply">
+
+	INSERT INTO lib_program_apply_user(
+	  program_apply_num,
+	  mem_num,
+	  program_times_num,
+	  program_reg_date)
+	VALUES(
+	  lib_program_apply_user_seq.nextval,
+	  #{mem_num},
+	  #{program_times_num},
+	  SYSDATE
+	)
+
+</insert>
+</mapper>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.spring.bookstore.service.dao.ServiceMapper">
+
+	<select id="selectAnnounceList" parameterType="map"
+	                          resultType="announceVO">
+		SELECT
+		   *
+		FROM (SELECT
+		        a.*,
+		        rownum rnum
+		      FROM(SELECT
+		             board_num,
+		             <![CDATA[
+		             REPLACE(REPLACE(board_title,'<','&lt;'),'>','&gt;') board_title, 
+		             ]]>
+		             board_reg_date
+		           FROM LM_BOARD_ANNOUNCE
+		           ORDER BY board_reg_date desc 
+		           )a)
+		<![CDATA[
+		WHERE rnum >= #{start} AND rnum <= #{end}
+		]]>	           
+	</select>
+	<!-- 전체/검색 레코드수 -->
+	<select id="selectRowCount" parameterType="map"
+	                             resultType="integer">
+		SELECT
+		  COUNT(*)
+		FROM LM_BOARD_ANNOUNCE
+	</select>
+	
+	<select id="selectFaqList" parameterType="map"
+	                          resultType="faqVO">
+		SELECT
+		   *
+		FROM (SELECT
+		        a.*,
+		        rownum rnum
+		      FROM(SELECT
+		             faq_num,
+		             <![CDATA[
+		             REPLACE(REPLACE(faq_title,'<','&lt;'),'>','&gt;') faq_title, 
+		             ]]>
+		             faq_content,
+		             faq_reg_date
+		           FROM LM_BOARD_FAQ
+		           WHERE faq_category=#{faq_category}
+		           ORDER BY faq_reg_date desc 
+		           )a)
+		<![CDATA[
+		WHERE rnum >= #{start} AND rnum <= #{end}
+		]]>	           
+	</select>
+	<!-- 전체/검색 레코드수 -->
+	<select id="selectRowCountFaq" parameterType="map"
+	                             resultType="integer">
+		SELECT
+		  COUNT(*)
+		FROM LM_BOARD_FAQ
+		WHERE faq_category=#{faq_category}
+	</select>
+	<insert id="insertAsk" parameterType="askVO">
+		INSERT INTO lm_board_ask(
+		  ask_num,
+		  mem_num,
+		  ask_title,
+		  ask_content,
+		  ask_category,
+		  ask_reg_date,
+		  ask_image,
+		  ask_imagename,
+		  ask_status) 
+		VALUES(
+		  lm_board_ask_seq.nextval,
+		  #{mem_num},
+		  #{ask_title},
+		  #{ask_content},
+		  #{ask_category},
+		  SYSDATE,
+		  #{ask_image},
+		  #{ask_imagename},
+		  0)
+	</insert>
+	
+	<insert id="insertAnswer" parameterType="answerVO">
+		INSERT INTO lm_board_answer(
+		  answer_num,
+		  ask_num,
+		  mem_num,
+		  answer_content,
+		  answer_reg_date,
+		  answer_image,
+		  answer_imagename) 
+		VALUES(
+		  lm_board_answer_seq.nextval,
+		  #{ask_num},
+		  #{mem_num},
+		  #{answer_content},
+		  SYSDATE,
+		  #{answer_image},
+		  #{answer_imagename})
+	</insert>
+	
+	<select id="orderList">
+		SELECT
+		  *
+		FROM lm_order_detail d JOIN lm_order_manage m
+		USING(order_num)
+	</select>
+	
+	<!-- 상품 상세 -->
+	<select id="selectProductByNum" parameterType="int">
+		SELECT
+		  * 
+		FROM STORE_PRODUCT_DETAIL d JOIN STORE_PRODUCT_MANAGE p USING(store_product_num)
+		WHERE store_product_num=#{store_product_num}
+	</select>
+	
+	<!-- 월별 매출 구하기 -->
+	<select id="selectOrderTotal">
+		SELECT
+		  SUM(d.order_product_price * d.cart_quantity) 
+		FROM
+		  store_order_detail d JOIN store_order_manage m
+		USING(order_num)
+		WHERE to_char(m.order_date,'YYYY-MM-DD') LIKE '%' || #{keyword} || '%'
+	</select>
+	
+	<select id="selectOrderTotalOrderBy">
+		select store_product_num, store_product_title, total, total_quantity, rownum
+FROM
+(SELECT
+         d.store_product_num,
+		  SUM(d.order_product_price * d.cart_quantity) AS total,
+		  sum(d.cart_quantity) AS total_quantity
+		FROM
+		  store_order_detail d JOIN store_order_manage m
+		USING(order_num)
+		WHERE to_char(m.order_date,'YYYY-MM-DD') LIKE '%' || #{keyword} || '%'
+        GROUP by d.store_product_num
+        order BY total dESC) a JOIN store_product_detail d
+USING(store_product_num)
+<![CDATA[
+WHERE rownum <= 5
+]]>
+	</select>
+</mapper>

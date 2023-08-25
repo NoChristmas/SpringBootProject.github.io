@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="loginMain" template="/WEB-INF/views/lm/login/template/loginLayout.jsp">
+    	<put-attribute name="loginTitle" value="로그인"/>
+    	<put-attribute name="login" value="/WEB-INF/views/lm/login/template/login.jsp"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+        <put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>
+		<put-attribute name="bsHeader" value="/WEB-INF/views/bookstore/template/bsHeader.jsp"/>
+		<put-attribute name="bsFooter" value="/WEB-INF/views/bookstore/template/bsFooter.jsp"/>
+    </definition> 
+    
+    
+    <definition name="registerMain" template="/WEB-INF/views/lm/register/template/registerLayout.jsp">
+    	<put-attribute name="registerTitle" value="회원가입"/>
+    	<put-attribute name="register" value="/WEB-INF/views/lm/register/template/register.jsp"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+        <put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>
+		<put-attribute name="bsHeader" value="/WEB-INF/views/bookstore/template/bsHeader.jsp"/>
+		<put-attribute name="bsFooter" value="/WEB-INF/views/bookstore/template/bsFooter.jsp"/>
+    </definition> 
+    
+    
+    <definition name="findIdMain" template="/WEB-INF/views/lm/findId/template/findIdLayout.jsp">
+    	<put-attribute name="findIdTitle" value="아이디 찾기"/>
+    	<put-attribute name="findId" value="/WEB-INF/views/lm/findId/template/findId.jsp"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+        <put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>
+		<put-attribute name="bsHeader" value="/WEB-INF/views/bookstore/template/bsHeader.jsp"/>
+		<put-attribute name="bsFooter" value="/WEB-INF/views/bookstore/template/bsFooter.jsp"/>
+    </definition>
+    
+    <definition name="findPasswdMain" template="/WEB-INF/views/lm/findPasswd/template/findPasswdLayout.jsp">
+    	<put-attribute name="findPasswdTitle" value="비밀번호 찾기"/>
+    	<put-attribute name="findPasswd" value="/WEB-INF/views/lm/findPasswd/template/findPasswd.jsp"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+        <put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>
+		<put-attribute name="bsHeader" value="/WEB-INF/views/bookstore/template/bsHeader.jsp"/>
+		<put-attribute name="bsFooter" value="/WEB-INF/views/bookstore/template/bsFooter.jsp"/>
+    </definition>
+    
+    <definition name="myPageMain" template="/WEB-INF/views/lm/mypage/main/myPageLayout.jsp">
+    	<put-attribute name="myPageTitle" value="주문 내역"/>
+    	<put-attribute name="myPageHeader" value="/WEB-INF/views/lm/mypage/header/myPageHeader.jsp"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/main/myPage.jsp"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+        <put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>
+		<put-attribute name="bsHeader" value="/WEB-INF/views/bookstore/template/bsHeader.jsp"/>
+		<put-attribute name="bsFooter" value="/WEB-INF/views/bookstore/template/bsFooter.jsp"/>
+    </definition>
+    
+    
+    <definition name="askListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="문의 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/asklist/askList.jsp"/>
+    </definition>
+    
+    <definition name="checkOutReturnListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="대출/반납 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/checkoutreturnlist/checkOutReturnList.jsp"/>
+    </definition>
+    
+    <definition name="wantBookListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="희망 도서 신청 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/wantbooklist/wantBookList.jsp"/>
+    </definition>
+    
+    <definition name="programApplyListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="프로그램 신청 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/programapplylist/programApplyList.jsp"/>
+    </definition>
+    
+    <definition name="facilityApplyListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="시설 이용 신청 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/facilityapplylist/facilityApplyList.jsp"/>
+    </definition>
+    
+    <definition name="bookReservationListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="도서 예약 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/bookreservationlist/bookReservationList.jsp"/>
+    </definition>
+    
+    <definition name="gradeInfoMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="등급 정보"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/gradeinfo/gradeInfo.jsp"/>
+    </definition>
+    
+    <definition name="bookLostListMain" extends="myPageMain">
+	    <put-attribute name="myPageTitle" value="분실 도서 신고 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/booklostlist/bookLostList.jsp"/>
+    </definition>
+    
+    <definition name="eventParticipateListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="이벤트 참여 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/eventparticipatelist/eventParticipateList.jsp"/>
+    </definition>
+    
+    <definition name="usedBookApplyListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="중고 도서 등록 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/usedbookapplylist/usedBookApplyList.jsp"/>
+    </definition>
+    
+    <definition name="zzimBookListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="찜한 도서 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/zzimbooklist/zzimBookList.jsp"/>
+    </definition>
+    
+    <definition name="bookWriteListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="도서 후기 내역"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/bookwritelist/bookWriteList.jsp"/>
+    </definition>
+    
+    <definition name="couponListMain" extends="myPageMain">
+	    <put-attribute name="myPageTitle" value="쿠폰 목록"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/couponlist/couponList.jsp"/>
+    </definition>
+    
+    <definition name="myEditMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="내 정보 수정"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/myedit/myEdit.jsp"/>
+    </definition>
+    
+    <definition name="pointInfoMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="포인트 정보"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/pointinfo/pointInfo.jsp"/>
+    </definition>
+    
+    <definition name="gradeInfoMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="등급 정보"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/gradeinfo/gradeInfo.jsp"/>
+    </definition>
+    
+    <definition name="bookReportListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="독후감 작성"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/bookreportlist/bookReportList.jsp"/>
+    </definition>    
+    
+    <definition name="memberOutMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="회원 탈퇴"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/memberout/memberOut.jsp"/>
+    </definition>    
+    
+    <definition name="orderListMain" extends="myPageMain">
+    	<put-attribute name="myPageTitle" value="주문 상세 목록"/>
+    	<put-attribute name="myPage" value="/WEB-INF/views/lm/mypage/orderlist/orderList.jsp"/>
+    </definition>    
+    
+</tiles-definitions>

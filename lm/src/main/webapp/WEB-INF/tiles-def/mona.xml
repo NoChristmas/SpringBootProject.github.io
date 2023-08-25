@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- 아래 설정을 상황에 맞게 변형해서 사용하세요 -->
+    <!-- <definition name="a1" extends="bsMain">
+    	<put-attribute name="title" value="SpringPage"/>
+	    <put-attribute name="bsbody" value="/WEB-INF/views/main/main.jsp"/>
+    </definition>  -->
+    
+    
+    
+    <definition name="bsEventWrite" extends="bsMain">
+    	<put-attribute name="bsTitle" value="이벤트 작성"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/eventWrite.jsp"/>
+    </definition>
+    <definition name="bsEventList" extends="bsMain">
+    	<put-attribute name="bsTitle" value="이벤트 리스트"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/eventList.jsp"/>
+    </definition> 
+    <definition name="attendanceEvent" extends="bsMain">
+    	<put-attribute name="bsTitle" value="출석 이벤트"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/attendanceEvent.jsp"/>
+    </definition> 
+     <definition name="bsEventModify" extends="bsMain">
+    	<put-attribute name="bsTitle" value="이벤트 수정"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/eventModify.jsp"/>
+    </definition>
+    <definition name="bsEventDetail" extends="bsMain">
+    	<put-attribute name="bsTitle" value="이벤트 상세페이지"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/eventDetail.jsp"/>
+    </definition>
+    <definition name="eventAnnounceList" extends="bsMain">
+    	<put-attribute name="bsTitle" value="당첨자 발표 리스트"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/eventAnnounceList.jsp"/>
+    </definition>
+    <definition name="eventAnnounceWrite" extends="bsMain">
+    	<put-attribute name="bsTitle" value="당첨자 발표 글쓰기"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/eventAnnounceWrite.jsp"/>
+    </definition>
+    <definition name="eventAnnounceView" extends="bsMain">
+    	<put-attribute name="bsTitle" value="당첨자 발표 글 상세페이지"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/event/eventAnnounceDetail.jsp"/>
+    </definition>
+    
+    <!-- 도서관 이용 -->
+    <definition name="libBasicPage" template="/WEB-INF/views/library/template/libBasicPage_layout.jsp">
+        <put-attribute name="libTitle" value="도서관 이용"/>
+        <put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+    	<put-attribute name="libNav" value="/WEB-INF/views/library/template/libPageNav.jsp"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/basic/lib_InformationUse1.jsp"/>
+	    <put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/> 
+    </definition>
+    
+    <definition name="informationUse1" extends="libBasicPage">
+        <put-attribute name="libTitle" value="이용안내"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/basic/lib_InformationUse1.jsp"/>
+    </definition>
+    <definition name="informationUse2" extends="libBasicPage">
+    	<put-attribute name="libTitle" value="대출·반납·연장·예약"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/basic/lib_InformationUse2.jsp"/>
+    </definition>
+    <definition name="informationUse3" extends="libBasicPage">
+    	<put-attribute name="libTitle" value="자료실안내"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/basic/lib_InformationUse3.jsp"/>
+    </definition>
+    <definition name="libCalendar" extends="libBasicPage">
+    	<put-attribute name="libTitle" value="도서관 일정"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/basic/lib_Calendar.jsp"/>
+    </definition>
+    
+    <!-- 도서관 신청 참여 -->
+     <definition name="libBasicPage2" template="/WEB-INF/views/library/template/libBasicPage_layout.jsp">
+        <put-attribute name="libTitle" value="도서관 이용"/>
+        <put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+    	<put-attribute name="libNav" value="/WEB-INF/views/library/template/libPageNav2.jsp"/>
+	    <put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/> 
+    </definition>
+    
+    <definition name="bookLostInfo" extends="libBasicPage2">
+    	<put-attribute name="libTitle" value="도서 분실 신고 안내"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/lostReport/bookLostInfo.jsp"/>
+    </definition>
+     
+    <definition name="bookLostReport" extends="libBasicPage2">
+    	<put-attribute name="libTitle" value="도서 분실 신고"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/lostReport/bookLostReport.jsp"/>
+    </definition>
+    <definition name="bookLostCheck" extends="libBasicPage2">
+    	<put-attribute name="title" value="도서 분실 결제확인"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/lostReport/bookLostCheck.jsp"/>
+    </definition>
+    
+    <!-- 관리자 페이지 일정 -->
+    <definition name="libScehduleAdminList" extends="libAdmin">
+    	<put-attribute name="libTitle" value="일정 목록"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/basic/lib_ScheduleAdminList.jsp"/>
+    </definition> 
+   
+</tiles-definitions>
+
+
+
+
+

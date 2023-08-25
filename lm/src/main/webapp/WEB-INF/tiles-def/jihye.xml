@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- 아래 설정을 상황에 맞게 변형해서 사용하세요 -->
+    <definition name="a1" extends="bsMain">
+    	<put-attribute name="title" value="SpringPage"/>
+	    <put-attribute name="body" value="/WEB-INF/views/main/main.jsp"/>
+    </definition> 
+    <!-- LM문고 -->
+    <!-- 장바구니 -->
+     <definition name="cart" extends="bsMain">
+    	<put-attribute name="title" value="장바구니"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/payment/cartMain.jsp"/>
+    </definition> 
+    <!-- 결제 페이지 -->
+     <definition name="order" extends="bsMain">
+    	<put-attribute name="title" value="결제 페이지"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/payment/orderMain.jsp"/>
+    </definition> 
+    <!-- LM 문고 결제 끝-->
+     <!-- 영수증 페이지 -->
+     <definition name="receipt" extends="bsMain">
+    	<put-attribute name="title" value="영수증"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/payment/receipt.jsp"/>
+    </definition>
+    <!-- 도서 리스트 --> 
+    <definition name="productListAll" extends="bsMain">
+    	<put-attribute name="title" value="도서목록"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/product/productListAll.jsp"/>
+    </definition>
+    <definition name="productListBest" extends="bsMain">
+    	<put-attribute name="title" value="베스트도서목록"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/product/productListBest.jsp"/>
+    </definition>
+    <definition name="productListNew" extends="bsMain">
+    	<put-attribute name="title" value="신규도서목록"/>
+	    <put-attribute name="bsBody" value="/WEB-INF/views/bookstore/product/productListNew.jsp"/>
+    </definition>
+    
+    <!-- LM도서 -->    
+    <!-- 도서관 도서 상세 -->
+     <definition name="bookDetail" extends="libBasicPage">
+    	<put-attribute name="title" value="도서상세"/>
+    	<put-attribute name="libNav" value="/WEB-INF/views/library/template/libDetailNav.jsp"/>
+	    <put-attribute name="libBody" value="/WEB-INF/views/library/lib_book/LIB_bookDetail.jsp"/>
+    </definition>
+
+</tiles-definitions>
+
+
+
+
+

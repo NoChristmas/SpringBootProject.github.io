@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Library Main -->
+    <definition name="libMain" template="/WEB-INF/views/library/template/libLayout.jsp">
+    	<put-attribute name="libTitle" value="LM 도서관"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+    	<put-attribute name="libBody" value="/WEB-INF/views/library/template/libBody.jsp"/>
+    	<put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>                                        
+    </definition>
+     <definition name="libAdmin" template="/WEB-INF/views/library/template/libLayout_admin.jsp">
+    	<put-attribute name="libTitle" value="LM 도서관(관리자페이지)"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+ 		<put-attribute name="libNav" value="/WEB-INF/views/library/template/libAdmin_nav.jsp"/>
+    	<put-attribute name="libBody" value="/WEB-INF/views/library/template/libAdmin.jsp"/>
+    	<put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>                                        
+    </definition>
+    
+    <definition name="libSearchMain" template="/WEB-INF/views/library/template/libSearchLayout.jsp">
+    	<put-attribute name="libTitle" value="LM 찾기"/>
+    	<put-attribute name="libHeader" value="/WEB-INF/views/library/template/libHeader.jsp"/>
+    	<put-attribute name="libSearchNav" value="/WEB-INF/views/library/template/libSearchNav.jsp"/>
+    	<put-attribute name="libSearch" value="/WEB-INF/views/library/template/libSearch.jsp"/>
+    	<put-attribute name="libFooter" value="/WEB-INF/views/library/template/libFooter.jsp"/>                                        
+    </definition>
+    
+</tiles-definitions>

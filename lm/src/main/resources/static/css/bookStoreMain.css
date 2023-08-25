@@ -1,0 +1,70 @@
+/*공통*/
+.main-book{
+	margin-bottom: 150px;
+}
+.main-book table{
+	margin-top: 20px;
+	border: none !important;
+}
+.main-book ul{
+	padding-left: 10px;
+	list-style: none;
+	font-size: 15px;
+}
+.main-book ul li{
+	text-align: justify;
+	margin-bottom: 5px;
+}
+.best-book table{
+    border-top: 2px solid #5055B1 !important;
+    border-bottom: 2px solid #5055B1 !important;
+}
+
+.new-book table{
+    border-top: 2px solid #69c43f !important;
+    border-bottom: 2px solid #69c43f !important;
+}
+.future-book table{
+    border-top: 2px solid !important;
+    border-bottom: 2px solid !important;
+}
+.main-book table td{
+	width: 184px;
+}
+.main-book table tr:first-child{
+	vertical-align: bottom;
+}
+.main-book table tr:last-child{
+	padding:0;
+	vertical-align: top;
+}
+.bsMain-content{
+	width: 1200px;
+	min-height: 928px;
+}
+.event{
+	margin: 20px 0 80px 0;
+}
+.event p{
+	margin-bottom: 0;
+	height: 120px;
+	font-size: 40px;
+	font-weight: 600;
+}
+.main-book{
+	font-size: 32px;
+	font-weight: 600;
+	text-align: center;
+}
+.main-book img{
+	width: 150px;
+    height: 212px;
+	text-align: center;
+}
+/*bootstrap*/
+*, ::after, ::before {
+	clear: none;	
+}
+a{
+	clear: none;
+}

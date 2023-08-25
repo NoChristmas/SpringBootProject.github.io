@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.spring.library.main.dao.LibraryMainMapper">
+	<!-- 중고 상품 등록 하기 -->
+	
+	
+	<sql id="keywordSearch">
+		<where>
+		    <if test="keyword!=null and keyword!=''">
+			lib_product_bookname LIKE '%' || #{keyword} || '%' 
+			or lib_product_authors LIKE '%' || #{keyword} || '%'
+			or lib_product_detail LIKE '%' || #{keyword} || '%'
+			</if>
+		</where>
+	</sql>
+	
+	<sql id="categoryNumSearch">
+		<where>
+			<if test="categoryNum!=10">
+			lib_product_class_no = #{categoryNum}
+			</if>
+		</where>
+	</sql>
+	
+	<select id="selectLibraryByCategoryAndOrderNum" parameterType="map" resultType="kr.spring.library.main.vo.LibraryMainVO">
+		SELECT * FROM (SELECT a.*, rownum rnum FROM( select * FROM (select * FROM lib_product_manage
+		<include refid="keywordSearch"></include>
+		) <include refid="categoryNumSearch"></include>
+		<choose>
+			<when test="orderByNum == 1">
+				ORDER BY lib_product_publication_year DESC
+			</when>
+			<when test="orderByNum == 2">
+				ORDER BY lib_product_bookname
+			</when>
+			<when test="orderByNum == 3">
+				ORDER BY lib_product_authors
+			</when>
+			<otherwise>
+				ORDER BY lib_product_publisher
+			</otherwise>
+		</choose>
+		)a) <![CDATA[ WHERE rnum >= #{start} AND rnum <= #{end} ]]>
+	</select>
+	
+	<select id="selectLibraryByCategoryAndOrderNumCount" parameterType="map" resultType="integer">
+		select COUNT(*) FROM (select * FROM lib_product_manage
+		<include refid="keywordSearch"></include>
+		)
+		<include refid="categoryNumSearch"></include>
+	</select>
+	
+</mapper>

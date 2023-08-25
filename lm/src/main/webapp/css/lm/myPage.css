@@ -1,0 +1,1737 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'NEXON Lv1 Gothic OTF';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.whole {
+	line-height: 1.15;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.top-div {
+	display: flex;
+	width: 1200px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	flex-direction: row;
+}
+
+hr {
+	width: 1200px;
+}
+
+.top-left-div { /*사진*/
+	display: flex;
+	width: 300px;
+	height: 300px;
+}
+
+.photo {
+	width: 280px;
+	height: 280px;
+	margin: 10px auto;
+	border: 1px solid black;
+}
+
+.list-first {
+	display: flex;
+	width: 900px;
+	height: 300px;
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-bottom: 150px;
+	flex-direction: row;
+}
+
+.list-first .photo {
+	width: 280px;
+	height: 280px;
+	margin: 10px auto;
+	border: 1px solid black;
+}
+
+.list-first-data {
+	display: flex;
+	width: 550px;
+	height: 300px;
+	flex-direction: column;
+}
+
+.list-first-data-detail {
+	font-size: 22px;
+	margin-top: 26px;
+}
+
+.list-second {
+	display: flex;
+	width: 900px;
+	height: 300px;
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-bottom: 150px;
+	flex-direction: column;
+}
+
+.list-second-first {
+	display: flex;
+	width: 900px;
+	height: 40px;
+	flex-direction: row;
+	font-size: 17px;
+}
+
+.list-second-second {
+	display: flex;
+	width: 900px;
+	height: 80px;
+	flex-direction: row;
+	font-size: 17px;
+}
+
+.list-second-third {
+	display: flex;
+	width: 900px;
+	height: 80px;
+	flex-direction: row;
+	font-size: 17px;
+}
+
+.lsf {
+	display: flex;
+	width: 150px;
+}
+
+.top-right-div {
+	display: flex;
+	width: 900px;
+	height: 300px;
+}
+
+.top-right-left-div {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+}
+
+.fir-content {
+	display: flex;
+	width: 280px;
+	height: 90px;
+	margin: 0 auto;
+	flex-direction: row;
+}
+
+.sec-content {
+	display: flex;
+	width: 280px;
+	height: 110px;
+	margin: 0 auto;
+	flex-direction: column;
+}
+
+.thi-content {
+	display: flex;
+	width: 280px;
+	height: 50px;
+	margin: 0 auto;
+	flex-direction: row;
+}
+
+.content-id {
+	display: inline;
+	width: 200px;
+	height: 90px;
+	font-size: 25px;
+	padding-top: 57px;
+}
+
+.content-change {
+	display: inline;
+	width: 90px;
+	height: 90px;
+	padding-top: 70px;
+}
+
+.sec-content-top {
+	width: 280px;
+	height: 60px;
+}
+
+.sec-content-bottom {
+	width: 280px;
+	height: 40px;
+}
+
+.content-grade {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	padding-top: 40px;
+	font-size: 15px;
+}
+
+.content-reg-date {
+	display: inline-block;
+	width: 100px;
+	height: 60px;
+	padding-top: 40px;
+}
+
+.content-edit-date {
+	display: inline-block;
+	width: 100px;
+	height: 60px;
+	padding-top: 40px;
+}
+
+.content-remain-grade {
+	display: inline-block;
+	width: 280px;
+	height: 50px;
+	font-size: 18px;
+	margin-top: 40px;
+}
+
+.content-point {
+	display: inline-block;
+	width: 280px;
+	height: 50px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	font-size: 18px;
+}
+
+.top-right-right-div {
+	display: flex;
+	width: 600px;
+	height: 300px;
+	margin-left: 20px;
+}
+
+.sub-button {
+	display: flex;
+	width: 120px;
+	height: 200px;
+	margin: 50px auto;
+	text-align: center;
+	flex-direction: column;
+}
+
+.sub-title {
+	display: inline-block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.sub-content {
+	display: inline-block;
+}
+
+.container {
+	width: 1200px;
+	padding: 50px 0px 80px;
+	margin: 0 auto;
+	display: flex;
+	min-height: 500px;
+}
+
+.left-div {
+	width: 200px;
+}
+
+.right-div {
+	width: 1000px;
+	padding: 0px 30px 0px;
+}
+
+.page-name {
+	display: flex;
+	flex-direction: row;
+	height: 50px;
+	padding: 0.83em 0px 20px 35px;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 35px;
+	color: rgb(51, 51, 51);
+	letter-spacing: -1px;
+}
+
+ul.menu-box {
+	display: flex;
+	margin: 0 40px;
+	padding: 0;
+	justify-content: flex-end;
+	width: 200px;
+	border: 1px solid rgb(242, 242, 242);
+}
+
+ul.menu-box li {
+	width: 100%;
+	border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+ul.menu-box li:hover {
+	background: #f2f2f2;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 16px;
+	border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+a.detail-menu {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 15px 13px 15px 20px;
+}
+
+ul.menu-box {
+	padding: 0;
+	list-style: none;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+ul.list li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul.list {
+	width: 100%;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	padding-top: -10px;
+}
+/* 구매 정보 */
+.status {
+	display: flex;
+	width: 900px;
+	height: 30px;
+	flex-direction: row;
+}
+
+.status .status-info {
+	display: flex;
+	margin-right: 20px;
+	color: gray;
+}
+
+#status-hr { /*내용 hr태그*/
+	display: inline-block;
+	border-bottom: 2px solid black;
+	margin-bottom: 15px;
+	width: 970px;
+}
+
+#title-list-hr {
+	display: inline-block;
+	border-bottom: 2px solid black;
+	margin-bottom: 10px;
+	width: 970px;
+}
+
+.title-list {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	width: 970px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+}
+
+ul.menu-box li {
+	margin: 0;
+}
+
+.list-name {
+	padding: 5px 0px 40px;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.list-name2 {
+	width: 100%;
+	text-align: center;
+}
+
+.stop {
+	color: #f08902;
+}
+
+.expire {
+	color: #cc0619;
+}
+
+.list-name div {
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.list-content {
+	padding: 5px 0px 1px;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	padding-bottom: 27px;
+	width: 100%;
+}
+
+.list-name h2 {
+	margin: 0;
+	padding: 0.83em 0;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	border: 0;
+}
+
+table.form-box {
+	width: 100%;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #eaeaea;
+	box-sizing: border-box;
+	padding: 18px 0;
+}
+
+.row-title {
+	padding: 24px 12px 10px;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: -0.01em;
+	text-align: center;
+	vertical-align: top;
+	font-weight: 500;
+}
+
+.row-content {
+	padding: 14px 10px;
+	line-height: 22px;
+	letter-spacing: -0.01em;
+	text-align: left;
+	vertical-align: top;
+	font-weight: 500;
+}
+
+.row-content input[type="text"] {
+	border: 1px solid #d5d5d5;
+	width: 97%;
+	font-size: 16px;
+	display: inline-block;
+	height: 44px;
+	padding: 0 14px 2px;
+	line-height: 42px;
+	letter-spacing: -0.01em;
+	outline: none;
+	border-radius: 6px;
+}
+
+.row-content input.text-title:focus {
+	border: 1px solid black;
+	width: 97%;
+	font-size: 16px;
+	display: inline-block;
+	height: 44px;
+	padding: 0 14px 2px;
+	line-height: 42px;
+	letter-spacing: -0.01em;
+	border-radius: 6px;
+	transition: border-color 0.2s ease-out;
+}
+
+#faq_category {
+	width: 100%;
+	border: 1px solid #d5d5d5;
+	font-size: 16px;
+	height: 44px;
+	border-radius: 6px;
+}
+
+.row-content textarea {
+	border: 1px solid #d5d5d5;
+	width: 97%;
+	font-size: 16px;
+	display: inline-block;
+	height: 246px;
+	padding: 0 14px 2px;
+	line-height: 42px;
+	letter-spacing: -0.01em;
+	outline: 0;
+	border-radius: 6px;
+}
+
+.small-button {
+	border: 1px solid #f2f2f2;
+	color: #a19f9f;
+	font-size: 16px;
+	cursor: pointer;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	margin: 0 10px;
+	min-width: 100px;
+	height: 25px;
+	padding: 0 23px 1px;
+	border-radius: 6px;
+}
+
+.small-button:hover {
+	border: 1px solid #cccaca;
+	background: #cccaca;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	margin: 0 10px;
+	min-width: 100px;
+	height: 25px;
+	padding: 0 23px 1px;
+	border-radius: 6px;
+	transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.button {
+	border: 1px solid #cba680;
+	background: #cba680;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	margin: 0 10px;
+	min-width: 200px;
+	height: 50px;
+	padding: 0 23px 1px;
+	border-radius: 6px;
+}
+
+.button:hover {
+	border: 1px solid #cba680;
+	background: #997959;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	margin: 0 10px;
+	min-width: 200px;
+	height: 50px;
+	padding: 0 23px 1px;
+	border-radius: 6px;
+	transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+div.file-button {
+	margin-bottom: 20px;
+	background-image: url(../images/file_button.png);
+	background-size: 16px 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-block;
+	width: 94px;
+	height: 94px;
+	border: 1px dashed #e5e5e5;
+	background-color: #f7f7f7;
+	cursor: pointer;
+	border-radius: 6px;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+span.icon1 {
+	background-image: url(../images/tags.png);
+	background-size: 36px 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 62px;
+	height: 62px;
+	margin-right: 14px;
+	border: 1px solid #eaeaea;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+span.icon2 {
+	background-image: url(../images/group.png);
+	background-size: 36px 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 62px;
+	height: 62px;
+	margin-right: 14px;
+	border: 1px solid #eaeaea;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+span.icon3 {
+	background-image: url(../images/calculator_alt.png);
+	background-size: 36px 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 62px;
+	height: 62px;
+	margin-right: 14px;
+	border: 1px solid #eaeaea;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+span.icon4 {
+	background-image: url(../images/pencil-edit.png);
+	background-size: 36px 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 62px;
+	height: 62px;
+	margin-right: 14px;
+	border: 1px solid #eaeaea;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+span.icon5 {
+	background-image: url(../images/house.png);
+	background-size: 36px 36px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 62px;
+	height: 62px;
+	margin-right: 14px;
+	border: 1px solid #eaeaea;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.icon-detail a {
+	display: flex;
+	align-items: center;
+}
+
+.title {
+	width: 100%;
+	padding: 50px 0;
+	font-weight: 700;
+	font-size: 28px;
+	text-align: center;
+	letter-spacing: -1px;
+}
+
+.content-box {
+	margin-top: 20px;
+	border-top: 2px solid #000;
+}
+
+.box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-detail {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.detail-title {
+	width: 130px;
+	padding: 13px 0 13px 20px;
+	background-color: #f7f5f8;
+	font-weight: 500;
+	text-align: left;
+}
+
+.specific {
+	padding-left: 25px;
+	display: flex;
+	justify-content: flex-end;
+	align-self: center;
+}
+
+div.main-content {
+	padding: 30px 10px 100px;
+	border-bottom: 1px solid #808080;
+}
+
+div.main-content img {
+	max-width: 500px;
+}
+
+div.button-box {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	padding: 20px 0;
+}
+
+textarea {
+	resize: none;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.no-answer {
+	color: black;
+}
+
+.answer {
+	color: #1f60a1;
+}
+
+div.faq_writeform {
+	display: none;
+}
+
+div.reply_div div {
+	display: flex;
+	flex-direction: row;
+}
+
+div.reply_name {
+	padding: 13px 10px;
+	margin: 0;
+}
+
+.button-box span {
+	padding: 0 10px;
+}
+
+.content {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}
+
+select.select {
+	width: 200px;
+	padding: .8em .5em;
+	border: 1px solid #999;
+	background: url('../images/arrow.jpg') no-repeat 95% 50%;
+	background-size: 12%;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+select.select::-ms-expand {
+	display: none;
+}
+
+.right-div-form {
+	display: flex;
+	width: 950px;
+	height: 700px;
+	flex-direction: column;
+}
+/* 내용 투명화 */
+#input-area-passwd {
+	display: none;
+}
+
+#input-area-email {
+	display: none;
+}
+
+#input-area-email2 {
+	display: none;
+}
+
+#input-area-cell {
+	display: none;
+}
+
+#input-area-photo {
+	display: none;
+}
+
+input {
+	width: 100px;
+	height: 30px;
+}
+
+.photo-form {
+	width: 1000px;
+	height: 350px;
+}
+
+.view-photo {
+	width: 280px;
+	height: 280px;
+	border: 1px solid black;
+}
+
+.view-photo2 {
+	width: 120px;
+	height: 120px;
+	border: 1px solid black;
+}
+
+.edit-button {
+	width: 100px;
+	height: 35px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.edit-button-photo {
+	width: 200px;
+	height: 35px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.input-button {
+	width: 150px;
+	height: 30px;
+}
+
+.hr-edit {
+	width: 1000px;
+}
+
+.id-form {
+	display: flex;
+	width: 300px;
+	height: 100px;
+	flex-direction: row;
+}
+
+.view-data {
+	width: 100px;
+	height: 40px;
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.view-data-title {
+	width: 100px;
+	height: 40px;
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.view-data-title2 {
+	width: 200px;
+	height: 50px;
+}
+
+.view-data-email {
+	height: 40px;
+	font-size: 18px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.view-data-cell {
+	margin-right: 20px;
+	height: 40px;
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.passwd-form {
+	display: flex;
+	width: 500px;
+	height: 100px;
+	flex-direction: column;
+}
+
+.passwd-btn-form {
+	display: flex;
+	flex-direction: row;
+}
+
+#input-area-passwd {
+	flex-direction: column;
+}
+
+.input-area-form {
+	display: flex;
+	width: 300px;
+	flex-direction: row;
+}
+
+.name-form {
+	display: flex;
+	width: 300px;
+	height: 100px;
+	flex-direction: row;
+}
+
+.email-form {
+	display: flex;
+	width: 800px;
+	height: 100px;
+	flex-direction: column;
+}
+
+.email-btn-form {
+	display: flex;
+	width: 800px;
+	height: 50px;
+	flex-direction: row;
+}
+
+#input-area-passwd {
+	width: 500px;
+	height: 5000px;
+}
+
+#email-tip {
+	margin-bottom: 10px;
+}
+
+.home-form {
+	display: flex;
+	width: 800px;
+	height: 50px;
+	flex-direction: row;
+}
+
+.home-info-box {
+	width: 200px;
+	display: none;
+	border: 1px solid black;
+	border-radius: 5px;
+	font-size: 16px;
+	margin-right: 10px;
+	height: 380px;
+}
+
+.edit-home-info-detail {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+.edit-home-info-detail-button {
+	width: 130px;
+	height: 22px;
+}
+
+#home_name2 {
+	border-bottom: 1px solid black;
+}
+
+#home_cell2 {
+	border-bottom: 1px solid black;
+}
+
+#home_title2 {
+	border-bottom: 1px solid black;
+}
+
+.home-info-detail {
+	padding-left: 5px;
+	margin-top: 5px;
+}
+
+.home-form-first {
+	display: flex;
+	flex-direction: row;
+	width: 800px;
+	height: 250px;
+}
+
+.home-form-second {
+	display: flex;
+	flex-direction: row;
+	width: 800px;
+	height: 380px;
+}
+
+.page-input-box {
+	display: none;
+	flex-direction: row;
+	width: 800px;
+	height: 50px;
+}
+
+#button-form {
+	display: flex;
+	flex-direction: row;
+	width: 800px;
+}
+
+#show-home {
+	display: block;
+}
+
+#hide-home {
+	display: none;
+}
+
+#hide-edit-home {
+	display: none;
+}
+
+#home_confirm {
+	display: none;
+}
+
+.page-input-box .input-style-check { /* 중복 체크 박스 설정 */
+	width: 150px;
+	height: 34px;
+	margin-left: 10px;
+	font-size: 15px;
+	border: 1px solid black;
+	padding: 0px 11px 1px 15px;
+	border-radius: 4px;
+	background-color: #E19B50;
+	color: black;
+	cursor: pointer;
+}
+
+.page-input-box .input-style-check:hover { /* 중복 체크 박스 호버 설정 */
+	width: 150px;
+	height: 34px;
+	margin-left: 10px;
+	font-size: 15px;
+	border: 1px solid black;
+	padding: 0px 11px 1px 15px;
+	border-radius: 4px;
+	background-color: #E19B50;
+	color: white;
+	cursor: pointer;
+}
+
+.cell-form {
+	display: flex;
+	width: 800px;
+	height: 100px;
+	flex-direction: column;
+}
+
+.cell-btn-form {
+	display: flex;
+	width: 800px;
+	height: 50px;
+	flex-direction: row;
+}
+
+.member-out {
+	display: block;
+	width: 1000px;
+}
+
+.member-out input {
+	float: right;
+}
+
+.button-more-info {
+	display: block;
+	background:
+		url("https://cdn.icon-icons.com/icons2/1883/PNG/512/downarrow_120663.png")
+		no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	border: none;
+}
+
+.button-more-info-close {
+	display: none;
+	background:
+		url("https://cdn.icon-icons.com/icons2/1883/PNG/512/caretsymbol_120671.png")
+		no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	border: none;
+}
+
+.cancelPay {
+	background-color: lighthgray;
+	border-radius: 3px;
+	border: 1px solid black;
+	width: 80px;
+	margin: 0 auto;
+}
+
+.order_status_confirm {
+	background-color: lighthgray;
+	border-radius: 3px;
+	border: 1px solid black;
+	width: 80px;
+	margin: 0 auto;
+}
+
+.show-detail {
+	display: none;
+	margin: 0 auto;
+	margin-top: -30px;
+	margin-bottom: 30px;
+}
+
+.bottom-div {
+	display: flex;
+	width: 970px;
+	height: 250px;
+	flex-direction: row;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.order-form {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	margin: 0 auto;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.order-form-info {
+	display: inline;
+	width: 290px;
+	margin-left: 5px;
+	margin-bottom: 3px;
+	margin-left: 5px;
+}
+/* 마이페이지 주문내역 설정 */
+.title-list {
+	display: flex;
+	width: 970px;
+}
+
+.item-list {
+	display: flex;
+	width: 970px;
+	height: 70px;
+}
+
+.item-list3 {
+	display: flex;
+	width: 970px;
+	height: 120px;
+	margin-bottom: 10px;
+}
+
+#t-mypage-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#t-mypage-title {
+	display: inline-block;
+	width: 430px;
+	text-align: center;
+}
+
+#t-mypage-price {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#t-mypage-date {
+	display: inline-block;
+	width: 170px;
+	text-align: center;
+}
+
+#t-mypage-status {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#c-mypage-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#c-mypage-title {
+	display: inline-block;
+	width: 430px;
+	text-align: center;
+}
+
+#c-mypage-price {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#c-mypage-date {
+	display: inline-block;
+	width: 170px;
+	text-align: center;
+}
+
+#c-mypage-status {
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+	text-align: center;
+}
+
+/* 마이페이지 대출/반납 설정 */
+#t-check-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#t-check-title {
+	display: inline-block;
+	width: 350px;
+	text-align: center;
+}
+
+#t-check-date1 {
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+}
+
+#t-check-date2 {
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+}
+
+#t-check-date3 {
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+}
+
+#t-check-status {
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+}
+
+#c-check-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#c-check-title {
+	display: inline-block;
+	width: 350px;
+	text-align: center;
+}
+
+#c-check-date1 {
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+}
+
+#c-check-date2 {
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+}
+
+#c-check-date3 {
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+}
+
+#c-check-status {
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+}
+
+/* 희망도서신청내역 설정 */
+#t-want-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#t-want-title {
+	display: inline-block;
+	width: 600px;
+	text-align: center;
+}
+
+#t-want-date {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#t-want-status {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+}
+
+#t-want-void {
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+}
+
+#c-want-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#c-want-title {
+	display: inline-block;
+	width: 600px;
+	text-align: center;
+}
+
+#c-want-date {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#c-want-status {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+}
+/* 주문내역상세 설정 */
+#item-list2 {
+	display: flex;
+	width: 970px;
+	height: 120px;
+	margin-bottom: 20px;
+}
+
+#t-order-list-detail {
+	display: inline-block;
+	width: 600px;
+	text-align: center;
+}
+
+#t-order-list-price {
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+}
+
+#t-order-list-amount {
+	display: inline-block;
+	width: 170px;
+	text-align: center;
+}
+
+#item-list-detail {
+	display: flex;
+	width: 480px;
+	height: 120px;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+#item-list-detail2 {
+	display: flex;
+	width: 600px;
+	height: 120px;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+#c-order-list-price {
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+}
+
+#c-order-list-amount {
+	display: inline-block;
+	width: 170px;
+	text-align: center;
+}
+
+/* 프로그램신청내역 설정 */
+#t-program-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#t-program-title {
+	display: inline-block;
+	width: 600px;
+	text-align: center;
+}
+
+#t-program-date {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#t-program-time {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#c-program-num {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
+}
+
+#c-program-title {
+	display: inline-block;
+	width: 600px;
+	text-align: center;
+}
+
+#c-program-date {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+#c-program-time {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+
+/* 시설이용신청내역 설정 */
+#t-facility-detail {
+	display: inline-block;
+	width: 600px;
+	text-align: center;
+}
+
+#t-facility-time {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+
+#t-facility-time2 {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+
+#t-facility-date {
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+}
+
+#c-facility-title {
+	display: inline-block;
+	width: 450px;
+	margin: 5px auto;
+}
+
+#c-facility-content {
+	display: inline-block;
+	width: 450px;
+	margin: 5px auto;
+}
+
+#c-facility-time {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+	margin: 40px auto;
+}
+
+#c-facility-time2 {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+	margin: 40px auto;
+}
+
+#c-facility-date {
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+	margin: 40px auto;
+}
+
+/* 도서예약내역 설정 */
+#t-reservation-detail {
+	display: inline-block;
+	width: 730px;
+	text-align: center;
+}
+
+#t-reservation-time {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+
+#t-reservation-status {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+
+#c-reservation-title {
+	display: inline-block;
+	width: 600px;
+	margin: 5px auto;
+}
+
+#c-reservation-authors {
+	display: inline-block;
+	width: 600px;
+	margin: 5px auto;
+}
+
+#c-reservation-publisher {
+	display: inline-block;
+	width: 600px;
+	margin: 5px auto;
+}
+
+#c-reservation-date {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+	margin: 40px auto;
+}
+
+#c-reservation-status {
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+	margin: 40px auto;
+}
+
+#mem_id {
+	width: 200px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+.outform {
+	display: flex;
+	width: 900px;
+	flex-direction: row;
+}
+
+#mem_passwd {
+	width: 200px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.outbtn {
+	width: 150px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+/* 분실도서신고내역 설정 */
+#t-lost-detail {
+	width: 500px;
+	text-align: center;
+}
+
+#t-lost-amount {
+	width: 180px;
+	text-align: center;
+}
+
+#t-lost-time {
+	width: 180px;
+	text-align: center;
+}
+
+#t-lost-status {
+	width: 110px;
+	text-align: center;
+}
+
+#c-lost-title {
+	width: 400px;
+}
+
+#c-lost-author {
+	width: 400px;
+}
+
+#c-lost-publisher {
+	width: 400px;
+}
+
+#c-lost-price {
+	width: 180px;
+	text-align: center;
+}
+
+#c-lost-time {
+	width: 180px;
+	text-align: center;
+}
+
+#item-list-detail3 {
+	display: flex;
+	flex-direction: column;
+}
+
+#item-list-detail4 {
+	display: flex;
+	width: 370px;
+	height: 120px;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+#c-lost-status {
+	width: 110px;
+	text-align: center;
+}
+
+#c-lost-type {
+	width: 110px;
+	text-align: center;
+}
+
+#t-point-amount {
+	width: 320px;
+	text-align: center;
+}
+
+#t-point-date {
+	width: 320px;
+	text-align: center;
+}
+
+#t-point-reason {
+	width: 320px;
+	text-align: center;
+}
+
+#c-point-amount {
+	width: 320px;
+	text-align: center;
+}
+
+#c-point-date {
+	width: 320px;
+	text-align: center;
+}
+
+#c-point-reason {
+	width: 320px;
+	text-align: center;
+}
+
+/* 찜한 도서 목록 */
+#t-zzim-detail {
+	width: 570px;
+	text-align: center;
+}
+
+#t-zzim-price {
+	width: 400px;
+	text-align: center;
+}
+
+#item-list-detail5 {
+	display: flex;
+	width: 470px;
+	height: 120px;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+#c-zzim-price {
+	width: 330px;
+	text-align: center;
+}
+
+/* 도서 후기 목록 */
+#t-write-detail {
+	width: 350px;
+	text-align: center;
+}
+
+#t-write-title {
+	width: 350px;
+	text-align: center;
+}
+
+#t-write-rating {
+	width: 135px;
+	text-align: center;
+}
+
+#t-write-date {
+	width: 135px;
+	text-align: center;
+}
+
+#c-write-detail {
+	width: 350px;
+	text-align: center;
+}
+
+#c-write-title {
+	width: 350px;
+	text-align: center;
+}
+
+#c-write-rating {
+	width: 135px;
+	text-align: center;
+}
+
+#c-write-date {
+	width: 135px;
+	text-align: center;
+}
